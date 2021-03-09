@@ -1,13 +1,13 @@
-dotFiles =$(wildcard *.dot) 
-pngFiles = $(patsubst % .dot , %.png,  $(dotFiles))
+DOTFILES =$(wildcard *.dot) 
+PNGFILES = $(patsubst % .dot , %.png,  $(DOTFILES))
 
-build:  $(pngFiles)
+build:  $(PNGFILES)
 
 list: 
-	@echo $(dotFiles)
+	@echo $(DOTFILES)
 
 destlist:
-	@echo $(pngFiles)
+	@echo $(PNGFILES)
 
 %.png: %.dot
 	dot  $<  -Tpng >  $@
