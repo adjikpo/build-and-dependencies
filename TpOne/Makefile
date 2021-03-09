@@ -10,7 +10,7 @@ destlist:
 	@echo $(PNGFILES)
 
 %.png: %.dot
-	dot  $<  -Tpng >  $@
+	dot -Tpng $< > $@
 
 clean:
 	rm *.png
